@@ -1,0 +1,859 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 179, 14, 255);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-section {
+  width: 50%;
+  padding-right: 30px;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: white;
+}
+
+.text-section h3 {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.pickup-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.button-group button:hover {
+  background-color: white !important;
+  border: 1px solid #ff5349;
+}
+
+.address-group {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.address-group button {
+  background-image: linear-gradient(to right, #ff5349, #fd6860);
+  color: white;
+}
+
+/* Wrapper for input and icon */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Input field styling */
+.input-wrapper input {
+  padding: 10px 10px 10px 40px; /* Space for the icon on the left */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  background-color: gainsboro;
+}
+
+/* Input focus styling */
+.input-wrapper input:focus {
+  border-color: rgba(246, 174, 14, 255);
+  outline: none;
+}
+
+/* Icon inside the input */
+.input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-icon1 {
+  font-size: 18px;
+  color: white;
+}
+
+.image-section img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and Medium Screens */
+@media (max-width: 768px) {
+  #banner {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .address-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-section img {
+    display: none;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  #banner {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .image-section img {
+    display: none;
+  }
+}
+
+/* section 2 */
+
+#products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Mild background for the section */
+}
+
+#products > div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness by wrapping on smaller screens */
+  justify-content: center;
+}
+
+#products > div > div {
+  position: relative; /* Needed for positioning the discount button inside the image */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 250px; /* Adjust the card size */
+  text-align: left;
+}
+
+#products img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.discount-button {
+  position: absolute; /* Positioning relative to the image */
+  bottom: 100px; /* 10px from the bottom edge */
+  left: 16px; /* 10px from the left edge */
+  background-color: rgba(
+    255,
+    179,
+    14,
+    255
+  ) !important; /* Discount button background */
+  color: #ffffff; /* Text color */
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  
+  text-align: left; /* Align text to the left */
+  z-index: 2; /* Ensures it appears above the image */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+}
+
+.discount-button span.large-number {
+  font-size: 20px; /* Larger font size for the number */
+  line-height: 1; /* Ensure tight spacing */
+ overflow-y: hidden;
+
+}
+
+.discount-button span.text-small {
+  font-size: 9px; /* Smaller font size for text */
+  line-height: 1.2; /* Adjust line spacing */
+  text-transform: uppercase; /* Ensure consistent text styling */
+}
+
+#products h4 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#products .days {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 150px;
+  transition: background-color 0.3s ease;
+  color: #ffffff; /* Text color */
+  background-color: #ff5349; /* Button color */
+  margin-bottom: 10px;
+}
+
+#products .days:hover {
+  background-color: white; /* Slight hover effect */
+}
+
+#products button p {
+  display: inline;
+  font-size: 12px;
+  margin-left: 5px;
+  color: #ffffff;
+}
+
+#products button:last-of-type {
+  background-color: rgba(
+    255,
+    83,
+    73,
+    0.1
+  ); /* Mild background for the "Days Remaining" button */
+  color: #ff5349; /* Text color for the "Days Remaining" button */
+  font-size: 12px;
+  border: 1px solid #ff5349; /* Border to match the color */
+}
+
+
+
+
+/* section3 */
+#how_it_works {
+    background-image: linear-gradient(to bottom, #f9e5e4,white );
+    padding: 40px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+  }
+  
+  .how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .how-it-works-heading {
+    color: #FF5349; /* Heading color */
+    text-align: center; /* Center the heading */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .how-it-works-cards {
+    display: flex;
+    
+    align-items: flex-start;
+    gap: 15px; /* Reduced gap between the cards */
+    flex-wrap: nowrap; /* Prevent wrapping of cards to the next line */
+  }
+  
+  .how-it-works-card {
+    display: flex;
+    flex-direction: column; /* Align content in a column inside each card */
+    align-items: center; /* Center align content inside each card */
+    text-align: center; /* Center the text in each card */
+    
+    padding: 20px;
+    border-radius: 10px;
+    
+    flex: 1; /* Allow cards to grow and fill the space evenly */
+    max-width: 22%; /* Ensure cards take up the appropriate space */
+  }
+  
+  .how-it-works-card-heading {
+    font-size: 18px;
+    color: #333333; /* Dark color for the headings inside the cards */
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .how-it-works-card-text {
+    font-size: 14px;
+    color: #666666; /* Lighter color for the description text */
+    margin-top: 5px;
+  }
+  
+  .how-it-works-icon {
+    font-size: 50px; /* Make icons larger */
+    color: rgba(255, 179, 14, 255); /* Icon color */
+    margin-bottom: 10px; /* Space between the icon and text */
+  }
+  
+
+
+
+  /* section4 */
+
+  /* Section Container */
+#popular-items {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.popular-items-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Heading */
+.popular-items-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* Carousel Styling */
+.popular-items-carousel {
+  margin-top: 20px;
+}
+
+/* Individual Card Styling */
+.popular-item-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+
+}
+
+.popular-item-image {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Content Styling */
+.popular-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.popular-item-title
+{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin: 5px 0;
+}
+
+.popular-item-area 
+{
+  color:rgba(255, 179, 14, 255) ;
+  font-weight: 100;
+  margin-top: 5px;
+  
+}
+
+.popular-item-days {
+  background-color: rgb(250,70,22);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+ 
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  width:100%;
+  transition: background-color 0.3s ease;
+}
+
+.popular-item-days:hover {
+  background-color: #e14a43;
+}
+
+.popular-item-amount{
+  margin-top: 6px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+.popular-icon{
+   color:rgba(255, 179, 14, 255) ;
+   margin-right: 5px;
+} 
+
+/* arrows */
+
+/* 
+restaurant section */
+
+/* General Styling */
+#restaurants {
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow-y: hidden;
+}
+
+.restaurant-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restaurant-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.restaurant-card {
+ 
+ 
+  border-radius: 8px;
+  padding: 15px;
+
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+
+.restaurant-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.restaurant-discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.restaurant-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.restaurant-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.restaurant-rating {
+  font-size: 0.9rem;
+  color: #888;
+  text-align: left;
+  margin-top:5px;
+}
+
+.restaurant-dish {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.restaurant-status {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.restaurant-status:hover {
+  background: #218838;
+}
+
+
+.button-view{
+  display:flex;
+  justify-content:center;
+  margin-top:20px
+}
+
+.button-view button{
+  background-color:rgba(246, 174, 14, 255);
+  color:white
+}
+
+.button-view button:hover{
+  background-color:white;
+  color: rgba(246, 174, 14, 255);
+  border: 1px solid rgba(246, 174, 14, 255) ;
+}
+
+
+/* section search by food */
+
+
+/* General Styling */
+#search-by-food {
+  padding: 30px;
+  background-color: #faeae9;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.search-by-food-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Enables positioning for the arrows */
+}
+
+.search-by-food-title {
+  font-size: 2rem;
+  color: #333;
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.carousel-container {
+  padding: 10px 0;
+  
+}
+
+.food-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.food-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Uncomment to enable hover scaling */
+.food-image:hover {
+  transform: scale(1.1);
+}
+
+.food-name {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Custom Arrows */
+.custom-arrow {
+  position: absolute;
+  top: -16px; /* Aligns with the heading */
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  color:rgba(246, 174, 14, 255);;
+}
+
+.left-arrow {
+  
+  right: 60px; /* Adjusts the spacing to the left of the right arrow */
+}
+
+.right-arrow {
+  right: 20px; /* Aligns close to the container's edge */
+}
+
+.custom-arrow:hover {
+  color: #000;
+}
+
+
+
+/* special box section */
+#special-menu {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  font-family: "Montserrat", sans-serif;
+}
+
+.special-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.special-menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+
+/* .reverse-layout {
+  flex-direction: row-revers;
+} */
+
+.special-menu-content {
+  flex: 0.5;
+  padding: 20px 30px;
+}
+
+.special-menu-content h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.special-menu-content h1 span {
+  color: #f39c12;
+}
+
+.special-menu-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.order-button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e67e22;
+}
+
+.special-menu-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-menu-image img {
+ width:100%;
+ height:400px;
+  object-fit: cover;
+}
+
+
+/* ready to order section */
+/* Section styles */
+/* Section styles */
+#ready-to-order {
+  background-color: rgba(255, 179, 14, 255); /* Yellow background */
+  padding: 60px 20px;
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px; /* Adjust height to match the design */
+  overflow: hidden; /* Ensure images don't go out of bounds */
+}
+
+/* Container styling */
+.container-order {
+ width: 100%;
+  height: auto;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative; /* To position images relative to the container */
+  z-index: 1; /* Ensure content is above background images */
+}
+
+/* Text styling */
+.container-order h2 {
+  font-size: 2.5rem;
+  color: white; /* White text for contrast */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.order-button {
+  padding: 15px 30px;
+  background-color: #ff6b01; /* Bright orange button */
+  color: white;
+  border: none;
+  margin-top: 30px;
+ 
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-button:hover {
+  background-color: #e55c00;
+  transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Image right styling */
+.image-right {
+  position: absolute;
+  top: -50px;
+  right: -40px;
+  width: 400px; /* Adjust image size */
+  transform: rotate(-10deg); /* Slight tilt for better alignment */
+  z-index: 0; /* Behind the text content */
+}
+
+/* Image left styling */
+.image-left {
+  position: absolute;
+  top: -60px;
+  left: -70px;
+  width: 400px; /* Consistent image size */
+  transform: rotate(-30deg); /* Tilt for left alignment */
+  z-index: 0; /* Behind the text content */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #ready-to-order {
+    height: auto;
+    padding: 40px 10px;
+  }
+  .container-order h2 {
+    font-size: 1.8rem;
+  }
+  .order-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .image-right,
+  .image-left {
+    width: 180px;
+    top: -50px;
+  }
+}
