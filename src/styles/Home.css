@@ -785,6 +785,195 @@ restaurant section */
 }
 
 
+/* section installing the app */
+/* General Layout */
+
+/* Install Container */
+/* General Layout */
+.install-app-section {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fff, #ffe7c1);
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 0 auto 40px auto; /* Centered */
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px; /* Space between icons */
+  text-align: center;
+  padding-right: 20px;
+  border-right: 1px solid rgb(190, 186, 186); /* Add border to all items */
+}
+
+.feature-item:last-child {
+  border-right: none; /* Remove the border for the last item */
+}
+
+.feature-item .icon {
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Install Container */
+.install-container {
+  display: flex;
+  align-items: flex-end; /* Aligns the mobile image at the bottom */
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 40px;
+  overflow-y: hidden;
+}
+
+/* Mobile Preview Section */
+.mobile-preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Aligns image bottom */
+  height: 100%;
+}
+
+.mobile-image {
+  height: 300px; /* Adjust image size */
+  width: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+/* App Info Section */
+.app-info {
+  flex: 1;
+  text-align: left;
+}
+
+.app-info h2 {
+  font-size: 32px;
+  color: #ff9000;
+  margin-bottom: 15px;
+}
+
+.app-info p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.download-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ff9000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-buttons .google-play:hover {
+  background-color: #e87c00;
+}
+
+.download-buttons .app-store:hover {
+  background-color: #d96d00;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: row;
+    padding: 15px 20px;
+  }
+
+  .feature-item {
+    border-right: none; /* Remove borders in a stacked view */
+    margin-bottom: 15px;
+  }
+
+  .install-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-image {
+    height: 200px;
+  }
+
+  .app-info {
+    text-align: center;
+  }
+
+  .app-info h2 {
+    font-size: 24px;
+  }
+
+  .app-info p {
+    font-size: 14px;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .feature-item {
+    margin: 0;
+  }
+
+  .app-info h2 {
+    font-size: 20px;
+  }
+
+  .app-info p {
+    font-size: 12px;
+  }
+
+  .download-buttons button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
 /* section search by food */
 
 
