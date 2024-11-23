@@ -169,11 +169,12 @@ button {
     padding: 10px;
   }
 
-  h1 {
+  #banner h1 {
     font-size: 30px;
+    margin-top: 50px;
   }
 
-  h3 {
+  #banner h3 {
     font-size: 16px;
   }
 
@@ -182,8 +183,8 @@ button {
     gap: 8px;
   }
 
-  input {
-    width: 100%;
+ .input-wrapper input {
+    width: 80%;
   }
 
   .image-section img {
@@ -370,6 +371,68 @@ button {
     font-size: 50px; /* Make icons larger */
     color: rgba(255, 179, 14, 255); /* Icon color */
     margin-bottom: 10px; /* Space between the icon and text */
+  }
+  
+
+  /* media queries for how it works section */
+  @media (max-width: 1024px) {
+    /* Tablet Screens */
+    .how-it-works-cards {
+      flex-wrap: wrap; /* Allow cards to wrap onto multiple lines */
+      justify-content: space-evenly; /* Evenly space the cards */
+    }
+  
+    .how-it-works-card {
+      max-width: 45%; /* Reduce card width to allow 2 cards per row */
+      margin-bottom: 20px; /* Add some space between the rows */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Small Tablet Screens */
+    .how-it-works-cards {
+      flex-wrap: wrap; /* Allow wrapping */
+      justify-content: center; /* Center the cards */
+    }
+  
+    .how-it-works-card {
+      max-width: 48%; /* Allow 2 cards per row on smaller tablets */
+      margin-bottom: 20px;
+    }
+  
+    .how-it-works-heading {
+      font-size: 28px; /* Smaller heading on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Mobile Screens */
+    .how-it-works-cards {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center; /* Center align the cards */
+    }
+  
+    .how-it-works-card {
+      max-width: 90%; /* Make cards take up most of the width on mobile */
+      margin-bottom: 20px; /* Add space between the cards */
+    }
+  
+    .how-it-works-heading {
+      font-size: 24px; /* Smaller heading for mobile */
+      margin-bottom: 20px; /* Reduce margin */
+    }
+  
+    .how-it-works-card-heading {
+      font-size: 16px; /* Smaller text for card headings */
+    }
+  
+    .how-it-works-card-text {
+      font-size: 12px; /* Smaller text for card descriptions */
+    }
+  
+    .how-it-works-icon {
+      font-size: 40px; /* Smaller icons for mobile */
+    }
   }
   
 
@@ -596,6 +659,131 @@ restaurant section */
   border: 1px solid rgba(246, 174, 14, 255) ;
 }
 
+/* media queries for restaurant section */
+
+/* Media Queries */
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .restaurant-title {
+    font-size: 1.5rem; /* Smaller title */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr)!important; /* Two columns on small screens */
+    gap: 10px; /* Optional, reduces the gap between cards */
+  }
+
+  .restaurant-card {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .restaurant-name {
+    font-size: 1rem!important; /* Smaller font size for restaurant name */
+  }
+
+  .restaurant-rating {
+    font-size: 0.8rem; /* Smaller rating font */
+  }
+
+  .restaurant-status {
+    font-size: 0.8rem!important; /* Smaller status font */
+    padding: 6px 10px;
+  }
+
+  .button-view button {
+    width: 100%; /* Full-width button on mobile */
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+  .restaurant-title {
+    font-size: 1.8rem; /* Slightly smaller title */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+  }
+
+  .restaurant-name {
+    font-size: 1.2rem; /* Slightly smaller restaurant name */
+  }
+
+  .restaurant-rating {
+    font-size: 0.9rem; /* Normal rating font */
+  }
+
+  .restaurant-status {
+    font-size: 0.9rem;
+    padding: 7px 12px;
+  }
+
+  .button-view button {
+    width: 100%; /* Full-width button on tablet */
+    font-size: 1rem;
+  }
+}
+
+/* Laptop Screens */
+@media (max-width: 1024px) {
+  .restaurant-title {
+    font-size: 2rem; /* Default size for laptop */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on laptops */
+  }
+
+  .restaurant-name {
+    font-size: 1.3rem;
+  }
+
+  .restaurant-rating {
+    font-size: 1rem;
+  }
+
+  .restaurant-status {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+
+  .button-view button {
+    width: auto; /* Restore width on laptops */
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Screens */
+@media (min-width: 1025px) {
+  .restaurant-title {
+    font-size: 2.5rem; /* Larger title for desktops */
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(4, 1fr); /* Four columns on desktops */
+  }
+
+  .restaurant-name {
+    font-size: 1.5rem;
+  }
+
+  .restaurant-rating {
+    font-size: 1.1rem;
+  }
+
+  .restaurant-status {
+    font-size: 1.1rem;
+    padding: 9px 16px;
+  }
+
+  .button-view button {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* section search by food */
 
@@ -763,11 +951,75 @@ restaurant section */
  height:400px;
   object-fit: cover;
 }
+/* 
+media queries for special menu section */
+
+/* For screens smaller than 700px */
+@media (max-width: 700px) {
+  .special-menu-box {
+    margin-bottom: 20px; /* Reduce spacing between boxes */
+  }
+
+  .special-menu-content h1 {
+    font-size: 1.2rem; /* Smaller font size for headings */
+  }
+
+  .special-menu-content p {
+    font-size: 0.8rem; /* Smaller font size for paragraph */
+  }
+
+  .order-button {
+    padding: 8px 15px; /* Adjust button size */
+    font-size: 0.9rem; /* Smaller button text */
+  }
+
+  .special-menu-image img {
+    height: 250px; /* Smaller image height */
+  }
+}
+
+/* For screens smaller than 500px */
+@media (max-width: 500px) {
+  .special-menu-content h1 {
+    font-size: 1rem; /* Further reduce font size */
+  }
+
+  .special-menu-box {
+    flex-direction: column-reverse;
+  }
+
+  .reverse-layout {
+    flex-direction: column;
+  }
+
+  .special-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the button horizontally */
+    justify-content: center; /* Centers the button vertically (if needed) */
+    text-align: center; /* Centers the text */
+  }
+
+  .special-menu-content p {
+    font-size: 0.7rem; /* Smaller paragraph text */
+    margin-bottom: 10px;
+  }
+
+  .order-button {
+    padding: 10px !important;
+    font-size: 13px !important;
+    width: 180px;
+    align-self: center!important;
+  }
+
+  .special-menu-image img {
+    height: 200px; /* Further reduce image height */
+  }
+}
 
 
 /* ready to order section */
-/* Section styles */
-/* Section styles */
+
 #ready-to-order {
   background-color: rgba(255, 179, 14, 255); /* Yellow background */
   padding: 60px 20px;
@@ -839,21 +1091,26 @@ restaurant section */
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   #ready-to-order {
-    height: auto;
-    padding: 40px 10px;
+    align-items: flex-start; /* Aligns items to the left */
+    padding-left: 20px; /* Adds spacing on the left */
+    text-align: left; /* Aligns text content to the left */
   }
-  .container-order h2 {
-    font-size: 1.8rem;
+
+  #ready-to-order h2 {
+    font-size: 1.6rem; /* Adjust font size for better readability */
+    margin-bottom: 15px;
   }
+
   .order-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    align-self: flex-start; /* Aligns button to the left */
+    margin-left: 0; /* Removes extra margin on the left */
   }
-  .image-right,
-  .image-left {
-    width: 180px;
-    top: -50px;
+}
+
+@media (max-width:700px) {
+  .image-right{
+    display: none;
   }
 }

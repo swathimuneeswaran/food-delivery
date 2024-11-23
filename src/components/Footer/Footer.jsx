@@ -85,7 +85,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faTwitter} />
           </div>
           {/* Newsletter Section */}
-          <h4 style={{ marginTop: "20px" }}>Subscribe to our newsletter</h4>
+          <h4 style={{ marginTop: "20px" }} >Subscribe to our newsletter</h4>
           <div className="newsletter-form">
             <input type="email" placeholder="Enter your email" />
             <button>Subscribe</button>
