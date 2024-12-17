@@ -100,7 +100,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>
           &copy; {new Date().getFullYear()} All rights reserved. Made with{" "}
-          <span style={{ color: "red", fontSize: "18px" }}>🧡</span> by Paulwin.
+          <span style={{ color: "red", fontSize: "18px" }}>🧡</span> by Swathi.
         </p>
       </div>
     </footer>
